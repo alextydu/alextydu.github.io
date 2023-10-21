@@ -16,7 +16,7 @@
             /* Menu styles */
             nav {
                 background-color: #333; /* Grey menu background color */
-                width: 200px; /* Adjust the width as needed */
+                width: 150px; /* Adjust the width as needed */
                 position: fixed; /* Fixed menu on the left */
                 height: 100%;
                 overflow: auto;
@@ -31,6 +31,7 @@
     
             nav li {
                 margin: 0 10px;
+                margin-bottom: 10px;
             }
     
             nav a {
@@ -64,22 +65,29 @@
     
             img {
                 width: 100%; /* Adjust the width to fit the menu */
-                max-width: 150px; /* Limit the width to avoid overflow */
+                max-width: 120px; /* Limit the width to avoid overflow */
                 height: auto; /* Maintain aspect ratio */
             }
-    
+            
+            body {
+                margin: 0; /* Remove default margin */
+                padding: 0; /* Remove default padding */
+            }
+
             .motto {
                 font-family: 'Cursive';
                 font-style: italic;
                 border: 2px solid black; /* Adjust the border width and color as needed */
                 padding: 5px; /* Add padding inside the border to create space */
+                max-width: 100%;
             }
+            
         </style>     
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     </head>
 <body>
     <nav>
-        <img src="personal_pic.jpg" alt="Your Image"> <!-- Replace with your image -->
+        <img src="personal_pic.jpg" alt="Your Image">  <!--Replace with your image -->
         <ul>
             <li><a href="cv-mar-2023.pdf" target="_blank">CV</a></li>
             <li><a href="#about-me">About Me</a></li>
@@ -90,28 +98,25 @@
             <li><a href="#honors">Honors & Awards</a></li>
             <li><a href="#collaborators">Collaborators</a></li>
         </ul>
-
-        <p style="color: white;">
-            Contact:
-        </p>
-
-        <p style="color: white;">
-            alexdu@umich.edu
-        </p>
     </nav>
 
-    <div style="margin-left: 210px; padding: 10px;"> <!-- Adjust margin and padding as needed -->
+    <div style="margin-left: 160px; padding: 10px;"> <!-- Adjust margin and padding as needed -->
 
         <div class="title">
             <h1>Tianyuan(Alex) Du</h1>
             <h4>杜天元</h4>
+            <h4>
+                <a href="mailto:alexdu@umich.edu"><i class="fas fa-envelope"></i> Email</a>
+                <a href="https://github.com/alextydu"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://www.linkedin.com/in/tianyuan-du-344962238/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://twitter.com/alextydu"><i class="fab fa-twitter"></i> Twitter</a>
+            </h4>
+            <div class="motto">
+                <p>Soberness has the power in itself.</p>
+                <p>清明有力。</p>
+            </div>
         </div>
-
-        <div class="motto">
-            <p>Soberness has the power in itself.</p>
-            <p>清明有力。</p>
-        </div>
-
+        
         <section id="about-me">
             <h1>About Me</h1>
             <p>
@@ -123,11 +128,6 @@
                 and <a href="https://emp.engin.umich.edu/">Professor Emily Mower Provost</a>. 
                 I also had a great experience collaborating with some wonderful <a href="#collaborators">graduate students</a>.
                 Outside academia, I train for triathlon, and I enjoy playing the piano.
-            </p>
-            <p>
-                <a href="https://www.linkedin.com/in/tianyuan-du-344962238/"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="https://github.com/alextydu"><i class="fab fa-github"></i> GitHub</a>
-                <a href="https://twitter.com/alextydu"><i class="fab fa-twitter"></i> Twitter</a>
             </p>
         </section>
 

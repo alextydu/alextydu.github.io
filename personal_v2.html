@@ -13,29 +13,52 @@
                 display: flex;
             }
     
-            /* Menu styles */
-            nav {
+            /* New styles for the side menu bar */
+            #sidebar {
                 background-color: #333; /* Grey menu background color */
                 width: 200px; /* Adjust the width as needed */
                 position: fixed; /* Fixed menu on the left */
                 height: 100%;
                 overflow: auto;
                 text-align: center;
+                z-index: 2; /* Ensure it's on top of other content */
+                top: 0; 
             }
     
-            nav ul {
+            #sidebar ul {
                 list-style-type: none;
                 padding: 0;
             }
-            
     
-            nav li {
-                margin: 0 10px;
+            #sidebar li {
+                margin: 0;
             }
     
-            nav a {
+            #sidebar a {
                 text-decoration: none;
                 color: white;
+                display: block;
+                padding: 10px 0; /* Add padding to menu items */
+            }
+    
+            #upper-menu {
+                background-color: #333; /* Change the background color to blue */
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 50px;
+                padding: 0 10px;
+                position: fixed;
+                left: 200px; /* Leave out 200px on the left for the sidebar */
+                width: calc(100% - 200px); /* Adjust the width to fill the remaining space */
+                z-index: 1; /* Ensure it's behind the sidebar */
+                top: 0; 
+            }
+    
+            #upper-menu a {
+                text-decoration: none;
+                color: white;
+                margin: 0 20px;
             }
     
             h1 {
@@ -74,33 +97,35 @@
                 border: 2px solid black; /* Adjust the border width and color as needed */
                 padding: 5px; /* Add padding inside the border to create space */
             }
-        </style>     
+            .content-section {
+                padding-top: 10px; /* Add padding to create space for the top bar */
+            }
+        </style>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     </head>
 <body>
-    <nav>
+    <div id="sidebar">
         <img src="personal_pic.jpg" alt="Your Image"> <!-- Replace with your image -->
         <ul>
-            <li><a href="cv-mar-2023.pdf" target="_blank">CV</a></li>
-            <li><a href="#about-me">About Me</a></li>
-            <li><a href="#news">News</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#experiences">Experiences</a></li>
-            <li><a href="#honors">Honors & Awards</a></li>
-            <li><a href="#collaborators">Collaborators</a></li>
+            <li><a href="mailto:alexdu@umich.edu"><i class="fas fa-envelope"></i> Email</a></li>
+            <li><a href="https://github.com/alextydu"><i class="fab fa-github"></i> GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/tianyuan-du-344962238/"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+            <li><a href="https://twitter.com/alextydu"><i class="fab fa-twitter"></i> Twitter</a></li>
         </ul>
+    </div>
 
-        <p style="color: white;">
-            Contact:
-        </p>
+    <div id="upper-menu">
+        <a href="cv-mar-2023.pdf" target="_blank">CV</a>
+        <a href="#about-me">About Me</a>
+        <a href="#news">News</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#experiences">Experiences</a>
+        <a href="#honors">Honors & Awards</a>
+        <a href="#collaborators">Collaborators</a>
+    </div>
 
-        <p style="color: white;">
-            alexdu@umich.edu
-        </p>
-    </nav>
-
-    <div style="margin-left: 210px; padding: 10px;"> <!-- Adjust margin and padding as needed -->
+    <div style="margin-left: 210px; padding: 60px 10px 10px 10px;"> <!-- Adjust margin and padding as needed -->
 
         <div class="title">
             <h1>Tianyuan(Alex) Du</h1>
@@ -112,7 +137,8 @@
             <p>清明有力。</p>
         </div>
 
-        <section id="about-me">
+        <section id="about-me" class="content-section">
+            
             <h1>About Me</h1>
             <p>
                 Welcome! I am an undergraduate student studying at the University of Michigan, Ann Arbor, with a major in Computer Science and Statistics. 
@@ -124,20 +150,28 @@
                 I also had a great experience collaborating with some wonderful <a href="#collaborators">graduate students</a>.
                 Outside academia, I train for triathlon, and I enjoy playing the piano.
             </p>
-            <p>
-                <a href="https://www.linkedin.com/in/tianyuan-du-344962238/"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="https://github.com/alextydu"><i class="fab fa-github"></i> GitHub</a>
-                <a href="https://twitter.com/alextydu"><i class="fab fa-twitter"></i> Twitter</a>
-            </p>
         </section>
 
-        <section id="news">
+        <section id="news" class="content-section">
             <h1>News</h1>
-            <p>Oct 2023: One work submitted to IEEE WCNC! Check out the one page intro <a href="3D-AoA-one-page.pdf">here</a>.</p>
+            <p>Oct 2023: One work submitted to IEEE WCNC! Check out the one-page intro <a href="3D-AoA-one-page.pdf">here</a>.</p>
             <p>Oct 2023: Created this site. Actively looking for PhD positions.</p>
         </section>
+
+        <section id="projects" class="content-section">
+            <h1>Projects</h1>
+            <p2>2D+Depth RF Localization via a Low-Cost Receiver</p2>
+            <p>Submitted, IEEE WCNC 2024. <a href="3D-AoA-one-page.pdf">(One Page Intro)</a></p>
+
+            <p2>Low-Latency Music Emotion Recognition</p2>
+            <p>Capstone Project. In submission, IEEE ICME 2024. <a href="Music-Emotion-one-page.pdf">(One Page Intro)</a></p>
+
+            <p2>Reconstruct 3D Human Pose with NeRF</p2>
+            <p>Course Project, Computer Vision(EECS 442). Check the report <a href="442_report.pdf">here</a></p>
+
+        </section>
     
-        <section id="education">
+        <section id="education" class="content-section">
             <h1>Education</h1>
 
             <p2>University of Michigan, Ann Arbor</p2>
@@ -154,20 +188,8 @@
         
         </section>
     
-        <section id="projects">
-            <h1>Projects</h1>
-            <p2>2D+Depth RF Localization via a Low-Cost Receiver</p2>
-            <p>Submitted, IEEE WCNC 2024. <a href="3D-AoA-one-page.pdf">(One Page Intro)</a></p>
-
-            <p2>Low-Latency Music Emotion Recognition</p2>
-            <p>Capstone Project. In submission, IEEE ICME 2024. <a href="Music-Emotion-one-page.pdf">(One Page Intro)</a></p>
-
-            <p2>Reconstruct 3D Human Pose with NeRF</p2>
-            <p>Course Project, Computer Vision(EECS 442). Check the report <a href="442_report.pdf">here</a></p>
-
-        </section>
     
-        <section id="experiences">
+        <section id="experiences" class="content-section">
             <h1>Experiences</h1>
             <h3>Research Assistant</h3>
             <p2>ISC Lab, University of Michigan, Ann Arbor, US</p2>
@@ -185,7 +207,7 @@
             <p>Supervisor: Kevin Chau</p>
         </section>
 
-        <section id="honors">
+        <section id="honors" class="content-section">
             <h1>Honors & Awards</h1>
 
             <h3>University Honor</h3>
@@ -199,13 +221,13 @@
             <p>2021</p>
         </section>
     
-        <section id="collaborators">
+        <section id="collaborators" class="content-section">
             <h1>Collaborators</h1>
             <ul>
-                <li><a href="https://devilsu.github.io/about/">Yang-Hsi Su (student of Alanson Sample)</a></li>
-                <li><a href="https://jasonqsy.github.io/">Shengyi Qian (student of David Fouhey)</a></li>
-                <li><a href="https://caoang327.github.io/">Ang Cao (student of Justine Johnson)</a></li>
-                <li><a href="https://mbanani.github.io/">Mohammed El Banani (student of Justine Johnson)</a></li>
+                <li><a href="https://devilsu.github.io/about/">Yang-Hsi Su</a> (student of Alanson Sample)</li>
+                <li><a href="https://jasonqsy.github.io/">Shengyi Qian</a> (student of David Fouhey)</li>
+                <li><a href="https://caoang327.github.io/">Ang Cao</a> (student of Justine Johnson)</li>
+                <li><a href="https://mbanani.github.io/">Mohammed El Banani</a> (student of Justine Johnson)</li>
             </ul>
         </section>
 
