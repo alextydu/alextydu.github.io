@@ -18,133 +18,152 @@
                 line-height: 1.6;
             }
     
-            /* Sidebar Navigation */
-            nav {
+            /* Top Header */
+            .top-header {
                 background: linear-gradient(180deg, #1e3a5f 0%, #2c5282 100%);
-                width: 200px;
-                position: fixed;
-                height: 100vh;
-                overflow-y: auto;
-                box-shadow: 2px 0 10px rgba(0,0,0,0.1);
-                z-index: 1000;
-            }
-
-            nav .profile-section {
-                padding: 30px 20px 20px;
+                color: white;
+                padding: 30px 60px;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
                 text-align: center;
-                border-bottom: 1px solid rgba(255,255,255,0.1);
             }
 
-            nav .profile-section img {
-                width: 120px;
-                height: 120px;
-                border-radius: 50%;
-                border: 3px solid #fff;
-                object-fit: cover;
-                margin-bottom: 10px;
-            }
-
-            nav .profile-section h3 {
-                color: #fff;
-                font-size: 16px;
-                font-weight: 600;
-                margin-bottom: 5px;
-            }
-
-            nav .profile-section p {
-                color: rgba(255,255,255,0.8);
-                font-size: 12px;
-            }
-    
-            nav ul {
-                list-style-type: none;
-                padding: 20px 0;
-            }
-    
-            nav li {
-                margin: 0;
-            }
-    
-            nav a {
-                display: block;
-                padding: 12px 25px;
-                text-decoration: none;
-                color: rgba(255,255,255,0.9);
-                font-size: 14px;
-                transition: all 0.3s ease;
-                border-left: 3px solid transparent;
-            }
-
-            nav a:hover {
-                background-color: rgba(255,255,255,0.1);
-                border-left-color: #4a9eff;
-                color: #fff;
-            }
-    
-            /* Main Content */
-            .main-content {
-                margin-left: 200px;
-                padding: 40px 60px;
-                max-width: 1000px;
-            }
-
-            /* Header Section */
-            .header {
-                margin-bottom: 50px;
-                padding-bottom: 30px;
-                border-bottom: 2px solid #e5e5e5;
-            }
-
-            .header h1 {
+            .top-header h1 {
                 font-size: 42px;
-                color: #1e3a5f;
-                margin-bottom: 8px;
+                margin-bottom: 5px;
                 font-weight: 700;
             }
 
-            .header h4 {
-                font-size: 16px;
-                color: #666;
+            .top-header h4 {
+                font-size: 18px;
                 margin-bottom: 20px;
                 font-weight: 400;
+                opacity: 0.9;
             }
 
-            .social-links {
+            .header-links {
                 display: flex;
-                gap: 20px;
+                gap: 25px;
                 flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
             }
 
-            .social-links a {
-                color: #2c5282;
+            .header-links a {
+                color: white;
                 text-decoration: none;
                 font-size: 14px;
                 display: flex;
                 align-items: center;
                 gap: 6px;
-                transition: color 0.3s ease;
+                transition: all 0.3s ease;
+                opacity: 0.9;
             }
 
-            .social-links a:hover {
-                color: #4a9eff;
+            .header-links a:hover {
+                opacity: 1;
+                transform: translateY(-2px);
             }
 
-            .social-links i {
+            .header-links i {
                 font-size: 16px;
+            }
+
+            /* Horizontal Navigation Bar */
+            .horizontal-nav {
+                background-color: #f8f9fa;
+                border-bottom: 3px solid #4a9eff;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+                position: sticky;
+                top: 0;
+                z-index: 999;
+            }
+
+            .horizontal-nav ul {
+                list-style-type: none;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                padding: 0;
+                margin: 0;
+            }
+
+            .horizontal-nav li {
+                margin: 0;
+            }
+
+            .horizontal-nav a {
+                display: block;
+                padding: 18px 25px;
+                text-decoration: none;
+                color: #2c5282;
+                font-size: 15px;
+                font-weight: 500;
+                transition: all 0.3s ease;
+                border-bottom: 3px solid transparent;
+                cursor: pointer;
+            }
+
+            .horizontal-nav a:hover {
+                background-color: rgba(74, 158, 255, 0.1);
+                color: #1e3a5f;
+            }
+
+            .horizontal-nav a.active {
+                background-color: rgba(74, 158, 255, 0.15);
+                color: #1e3a5f;
+                border-bottom-color: #4a9eff;
+                font-weight: 600;
+            }
+
+            /* Profile Image Section */
+            .profile-image-section {
+                text-align: center;
+                padding: 40px 60px;
+                background-color: #f8f9fa;
+            }
+
+            .profile-image-section img {
+                max-width: 300px;
+                width: 100%;
+                height: auto;
+                border-radius: 8px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            }
+
+            /* Main Content */
+            .main-content {
+                padding: 40px 60px;
+                max-width: 1200px;
+                margin: 0 auto;
             }
 
             /* Section Styles */
             section {
-                margin-bottom: 50px;
+                display: none;
+                animation: fadeIn 0.4s ease-in;
+            }
+
+            section.active {
+                display: block;
+            }
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(10px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
             }
 
             section h1 {
-                font-size: 28px;
+                font-size: 32px;
                 color: #1e3a5f;
-                margin-bottom: 20px;
-                padding-bottom: 10px;
+                margin-bottom: 30px;
+                padding-bottom: 15px;
                 border-bottom: 3px solid #4a9eff;
-                display: inline-block;
             }
 
             section h2 {
@@ -234,18 +253,37 @@
                 border-top: 2px solid #e5e5e5;
                 color: #888;
                 font-size: 13px;
+                text-align: center;
             }
 
             /* Responsive Design */
             @media (max-width: 768px) {
-                nav {
-                    width: 100%;
-                    height: auto;
-                    position: relative;
+                .top-header {
+                    padding: 20px;
+                }
+
+                .top-header h1 {
+                    font-size: 32px;
+                }
+
+                .horizontal-nav ul {
+                    justify-content: flex-start;
+                }
+
+                .horizontal-nav a {
+                    padding: 15px 15px;
+                    font-size: 14px;
+                }
+
+                .profile-image-section {
+                    padding: 30px 20px;
+                }
+
+                .profile-image-section img {
+                    max-width: 250px;
                 }
 
                 .main-content {
-                    margin-left: 0;
                     padding: 20px;
                 }
             }
@@ -253,39 +291,38 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     </head>
 <body>
-    <nav>
-        <div class="profile-section">
-            <img src="personal_pic.jpg" alt="Tianyuan Du">
-            <h3>Tianyuan Du</h3>
-            <p>Ph.D. Student</p>
+    <div class="top-header">
+        <h1>Tianyuan (Alex) Du</h1>
+        <h4>杜天元</h4>
+        <div class="header-links">
+            <a href="mailto:td222@duke.edu"><i class="fas fa-envelope"></i> Email</a>
+            <a href="https://github.com/alextydu" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://www.linkedin.com/in/tianyuan-du-344962238/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://twitter.com/alextydu" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="https://scholar.google.com/citations?user=4E1hG5YAAAAJ" target="_blank"><i class="fas fa-book"></i> Google Scholar</a>
+            <a href="CV_Jan26.pdf" target="_blank"><i class="fas fa-file-pdf"></i> CV</a>
         </div>
+    </div>
+
+    <nav class="horizontal-nav">
         <ul>
-            <li><a href="CV_Jan26.pdf" target="_blank"><i class="fas fa-file-pdf"></i> CV</a></li>
-            <li><a href="#about-me"><i class="fas fa-user"></i> About Me</a></li>
-            <li><a href="#news"><i class="fas fa-newspaper"></i> News</a></li>
-            <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
-            <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
-            <li><a href="#experiences"><i class="fas fa-briefcase"></i> Experiences</a></li>
-            <li><a href="#honors"><i class="fas fa-award"></i> Honors & Awards</a></li>
-            <li><a href="#collaborators"><i class="fas fa-users"></i> Collaborators</a></li>
-            <li><a href="#miscellaneous"><i class="fas fa-star"></i> Miscellaneous</a></li>
+            <li><a onclick="showSection('about-me')" class="nav-link active">About Me</a></li>
+            <li><a onclick="showSection('news')" class="nav-link">News</a></li>
+            <li><a onclick="showSection('education')" class="nav-link">Education</a></li>
+            <li><a onclick="showSection('projects')" class="nav-link">Projects</a></li>
+            <li><a onclick="showSection('experiences')" class="nav-link">Experiences</a></li>
+            <li><a onclick="showSection('honors')" class="nav-link">Honors & Awards</a></li>
+            <li><a onclick="showSection('collaborators')" class="nav-link">Collaborators</a></li>
+            <li><a onclick="showSection('miscellaneous')" class="nav-link">Miscellaneous</a></li>
         </ul>
     </nav>
 
+    <div class="profile-image-section">
+        <img src="personal_pic.jpg" alt="Tianyuan Du">
+    </div>
+
     <div class="main-content">
-        <div class="header">
-            <h1>Tianyuan (Alex) Du</h1>
-            <h4>杜天元</h4>
-            <div class="social-links">
-                <a href="mailto:td222@duke.edu"><i class="fas fa-envelope"></i> Email</a>
-                <a href="https://github.com/alextydu"><i class="fab fa-github"></i> GitHub</a>
-                <a href="https://www.linkedin.com/in/tianyuan-du-344962238/"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="https://twitter.com/alextydu"><i class="fab fa-twitter"></i> Twitter</a>
-                <a href="https://scholar.google.com/citations?user=4E1hG5YAAAAJ"><i class="fas fa-book"></i> Google Scholar</a>
-            </div>
-        </div>
-        
-        <section id="about-me">
+        <section id="about-me" class="active">
             <h1>About Me</h1>
             <p>
                 Welcome! I am a second year Ph.D. student at Duke University, advised by Professor <a href="https://maria.gorlatova.com/bio/">Maria Gorlatova</a>.  
@@ -425,5 +462,30 @@
             <p>Last Updated: January 2026</p>
         </div>
     </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Remove active class from all nav links
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+
+            // Show the selected section
+            document.getElementById(sectionId).classList.add('active');
+
+            // Add active class to clicked nav link
+            event.target.classList.add('active');
+
+            // Scroll to top of page
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
