@@ -164,7 +164,7 @@ correct it, delete it, restrict or object to how we use it, receive a copy in a 
 format, and withdraw consent at any time without affecting the lawfulness of what came
 before.
 
-To exercise any of these, email `[PRIVACY CONTACT EMAIL]`. We apply these rights to all
+To exercise any of these, email `alex.du@duke.edu`. We apply these rights to all
 users regardless of region.
 
 If you are in the EEA or UK you may also complain to your national data protection
@@ -178,10 +178,6 @@ your rights.
 
 WordPlay is not directed to children under 13, and we do not knowingly collect data from
 them. Meta Quest headsets have their own minimum age requirements.
-
-`[LEGAL REVIEW: If the study protocol enrolls minors, this section must be rewritten to
-describe parental consent and assent instead. Do not publish this wording if the protocol
-includes participants under 18.]`
 
 ---
 
@@ -214,5 +210,5 @@ Duke University
 Durham, NC `27705`, United States
 
 Privacy and data deletion: `alex.du@duke.edu`
-Principal Investigator: `maria.gorlatova@duke.edu
-Duke IRB: `alex.du@duke.edu`, protocol `2026-0308`
+Principal Investigator: `maria.gorlatova@duke.edu`
+Duke IRB: alex.du@duke.edu, protocol `2026-0308
