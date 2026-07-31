@@ -125,7 +125,7 @@ consent form.
 
 ---
 
-## 7. How to request deletion of your data
+## 6. How to request deletion of your data
 
 **You can request deletion of your data at any time, from any country, free of charge.**
 
@@ -157,7 +157,7 @@ aggregated, we will tell you so when we respond.
 
 ---
 
-## 8. Your rights
+## 7. Your rights
 
 Depending on where you live, you may have the right to access the data we hold about you,
 correct it, delete it, restrict or object to how we use it, receive a copy in a portable
@@ -174,7 +174,7 @@ your rights.
 
 ---
 
-## 9. Children
+## 8. Children
 
 WordPlay is not directed to children under 13, and we do not knowingly collect data from
 them. Meta Quest headsets have their own minimum age requirements.
@@ -185,7 +185,7 @@ includes participants under 18.]`
 
 ---
 
-## 10. Security
+## 9. Security
 
 Motion recordings are stored on access-controlled computers managed under Duke University's
 information security requirements. Access is limited to research personnel named in the IRB
@@ -198,7 +198,7 @@ notify affected users and the relevant authorities of a breach where required by
 
 ---
 
-## 11. Changes to this policy
+## 10. Changes to this policy
 
 If we change this policy we will update the date at the top of this page. Where changes are
 significant and affect research participants, we will notify you and, where required,
@@ -206,7 +206,7 @@ re-obtain consent.
 
 ---
 
-## 12. Contact
+## Contact
 
 Intelligent Interactive Internet of Things Lab
 Duke University
